@@ -1,0 +1,18 @@
+{
+  "id": 22,
+  "category": {
+    "id": 33,
+    "name": "string"
+  },
+  "name": "Bird",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}

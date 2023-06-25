@@ -14,15 +14,39 @@ public class EbaySearchResultSteps {
 		Thread.sleep(2000);
 	}
 	
-	@When("^Filter by \"([^\"]*)\"$")
-	public void filter_by(String brand) throws Throwable {
-		EbaySearchResultActionsObj.filterBrand(brand);
-		Thread.sleep(2000);
-	}
+	//@When("^Filter by \"([^\"]*)\"$")
+	//public void filter_by(String brand) throws Throwable {
+		//EbaySearchResultActionsObj.filterBrand(brand);
+	//	Thread.sleep(2000);
+	//}
 	
-	@Then("^Item list should have products of \"([^\"]*)\"$")
-	public void item_list_should_have_products_of(String brand) throws Throwable {
-		EbaySearchResultActionsObj.verifyBrandItems(brand);
-		Thread.sleep(2000);
+	//@Then("^Item list should have products of \"([^\"]*)\"$")
+	//public void item_list_should_have_products_of(String brand) throws Throwable {
+	//	EbaySearchResultActionsObj.verifyBrandItems(brand);
+	//	Thread.sleep(2000);
+	
+	
+	
+	@When("^Filter by \"([^\"]*)\"$")
+     public void filter_by(String brand) throws Throwable {
+		EbaySearchResultActionsObj.filterBrand(brand);
+	Thread.sleep(2000);
 	}
+     @Then("^Item list should have products of \"([^\"]*)\"$")
+     public void item_list_should_have_products_of(String brand) throws Throwable {
+    	 EbaySearchResultActionsObj.verifyBrandItems(brand);
+    		Thread.sleep(2000);
+	}
+     
+     @When("^Select the first shirt on item list$")
+     public void select_the_first_shirt_on_item_list() throws Exception {
+    	 EbaySearchResultActionsObj.selectBigTallTee();
+    	 Thread.sleep(2000);
+   }
+
+@When("^Select the first shoes$")
+public void select_the_first_shoes() throws  Exception {
+	 EbaySearchResultActionsObj.selectFirstShoes();
+	 Thread.sleep(2000);
+   }
 }
